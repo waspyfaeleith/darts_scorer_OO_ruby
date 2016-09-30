@@ -38,4 +38,9 @@ class TestThrow < Minitest::Test
     t = Throw.new(164)
     assert_equal(true, t.is_valid?())
   end
+
+  def test_minus_10_is_invalid_throw
+    t = Throw.new(-10)
+    assert_equal(false, t.is_valid?())
+  end
 end
