@@ -1,15 +1,15 @@
 require ('minitest/autorun')
 require ('minitest/rg')
-require_relative ('../dart_scorer')
+require_relative ('../match')
 
-class TestDartScorer < Minitest::Test
+class TestMatch < Minitest::Test
  def setup
    @player1 = Player.new("Jack", 501)
    @player2 = Player.new("Victor", 501)
 
    @players = [@player1, @player2]
 
-   @match = DartScorer.new(@player1.name, @player2.name, 9, 5, 301);
+   @match = Match.new(@player1.name, @player2.name, 9, 5, 301);
 
  end
 
